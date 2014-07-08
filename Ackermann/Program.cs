@@ -11,16 +11,27 @@ namespace Ackermann
 
         static void Main()
         {
-            const int m = -1;
+            const int m = 9;
             const int n = 8;
 
             Task.Factory.StartNew(PrintCount);
 
-            int result = ack(m, n);
-            _running = false;
+            try
+            {
+                int result = ack(m, n);
+                _running = false;
 
-            Console.WriteLine("------------------------------------");
-            Console.WriteLine("Results: {0}", result);
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("{0} loops", _loops);
+                Console.WriteLine("Results: {0}", result);
+            }
+            catch (StackOverflowException)
+            {
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("Woops, looks like we ran out of stack :(");
+                Console.WriteLine("{0} loops", _loops);
+            }
+
             Console.ReadKey();
         }
 
@@ -52,7 +63,7 @@ namespace Ackermann
                 long loops = Interlocked.Read(ref _loops);
                 Console.WriteLine("{0} loops", loops);
 
-                Thread.Sleep(TimeSpan.FromSeconds(1));
+                Thread.Sleep(TimeSpan.FromSeconds(0.2));
             }
         }
     }
