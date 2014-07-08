@@ -1,0 +1,6 @@
+F:\My Documents\GitHub\Ackermann\Ackermann\bin\Debug\Ackermann.exe.config
+F:\My Documents\GitHub\Ackermann\Ackermann\bin\Debug\Ackermann.exe
+F:\My Documents\GitHub\Ackermann\Ackermann\bin\Debug\Ackermann.pdb
+F:\My Documents\GitHub\Ackermann\Ackermann\obj\Debug\Ackermann.csprojResolveAssemblyReference.cache
+F:\My Documents\GitHub\Ackermann\Ackermann\obj\Debug\Ackermann.exe
+F:\My Documents\GitHub\Ackermann\Ackermann\obj\Debug\Ackermann.pdb
